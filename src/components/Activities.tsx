@@ -31,7 +31,7 @@ export default function Activities() {
   }, []);
 
   return (
-    <div className="flex flex-col gap-4 flex-grow">
+    <div className="flex flex-col gap-4 ">
       <h2 className="text-xl md:text-2xl text-slate-50 font-semibold">
         Coding Activities
       </h2>
@@ -47,7 +47,7 @@ export default function Activities() {
 function ActivitiesItem({ name, percent, text }: languageType) {
   return (
     <div key={name} className="flex flex-col gap-1">
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center min-w-72">
         <p>{name}</p>
         <p>{text}</p>
       </div>
