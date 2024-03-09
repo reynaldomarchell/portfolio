@@ -136,8 +136,8 @@ function ProjectItem({ title, description, link, tools }: projectType) {
   return (
     <Link href={link}>
       <div className="border py-4 px-3 rounded-md space-y-2 hover:cursor-pointer hover:-translate-y-1 hover:translate-x-1 hover:transition-all hover:duration-500 hover:bg-slate-900 hover:text-slate-50">
-        <div className="flex justify-between items-center">
-          <h3 className="text-lg font-semibold">{title}</h3>
+        <div className="flex justify-between items-center border-b-2">
+          <h3 className="text-lg font-semibold text-slate-50">{title}</h3>
           <ChevronRight />
         </div>
         <p>{description}</p>
