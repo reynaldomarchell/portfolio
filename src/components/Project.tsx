@@ -13,6 +13,7 @@ import {
   SiPhp,
   SiLaravel,
   SiBootstrap,
+  SiDaisyui,
 } from "react-icons/si";
 
 type projectType = {
@@ -24,14 +25,17 @@ type projectType = {
 
 const projectData: projectType[] = [
   {
-    title: "Chat Nindi",
+    title: "Chat Aoba",
     description:
-      "💌 Nindi is an 2D AI assistant who can accompany you when you're lonely.",
-    link: "https://github.com/reynaldomarchell/chat-nindi.git",
+      "💌 Aoba is a 2D AI assistant who can accompany you when you're lonely",
+    link: "https://github.com/reynaldomarchell/chat-aoba.git",
     tools: (
       <>
         <SiTypescript />
         <SiReact />
+        <SiExpress />
+        <SiTailwindcss />
+        <SiDaisyui />
       </>
     ),
   },
