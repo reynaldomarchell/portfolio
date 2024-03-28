@@ -28,7 +28,7 @@ const projectData: projectType[] = [
     title: "Chat Aoba",
     description:
       "💌 Aoba is a 2D AI assistant who can accompany you when you're lonely",
-    link: "https://github.com/reynaldomarchell/chat-aoba.git",
+    link: "https://chat-aoba.vercel.app/",
     tools: (
       <>
         <SiTypescript />
