@@ -16,7 +16,7 @@ export default function Profile() {
       <p>A person who loves to code and learn new things 💖</p>
 
       <Link
-        href="https://drive.google.com/file/d/1DQYj7Vi4WuSX-_jdKPJqgKaa_uBjQj9u/view?usp=sharing"
+        href="https://drive.google.com/file/d/15PJuxzXU1_kDxFEhCSgTSx-gqZcdnKUl/view?usp=sharing"
         className="justify-center flex border rounded-md py-2 px-4 hover:bg-slate-900 hover:-translate-y-1 hover:translate-x-1 hover:transition-all hover:duration-500 hover:cursor-pointer hover:text-slate-50 gap-2 items-center"
       >
         <p className="font-medium">Download my CV</p>
