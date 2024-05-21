@@ -29,7 +29,7 @@ const projectData: projectType[] = [
   {
     title: "YumeNime",
     description:
-      "🌙 YumeNime is a free anime streaming website without ads and responsive created using Next.js",
+      "🌙 YumeNime is an ad-free and responsive anime streaming website created using Next.js",
     link: "https://yumenime.vercel.app",
     tools: (
       <>
@@ -42,7 +42,7 @@ const projectData: projectType[] = [
   },
   {
     title: "Chat Aoba",
-    description: "💌 Aoba is a 2D AI assistant powered by Gemini model",
+    description: "💌 Aoba is a 2D AI assistant powered by a Gemini model",
     link: "https://chat-aoba.vercel.app",
     tools: (
       <>
