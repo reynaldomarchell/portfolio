@@ -14,6 +14,8 @@ import {
   SiLaravel,
   SiBootstrap,
   SiDaisyui,
+  SiNextdotjs,
+  SiShadcnui,
 } from "react-icons/si";
 
 type projectType = {
@@ -25,10 +27,23 @@ type projectType = {
 
 const projectData: projectType[] = [
   {
-    title: "Chat Aoba",
+    title: "YumeNime",
     description:
-      "💌 Aoba is a 2D AI assistant who can accompany you when you're lonely",
-    link: "https://chat-aoba.vercel.app/",
+      "🌙 YumeNime is a free anime streaming website without ads and responsive created using Next.js",
+    link: "https://yumenime.vercel.app",
+    tools: (
+      <>
+        <SiTypescript />
+        <SiNextdotjs />
+        <SiTailwindcss />
+        <SiShadcnui />
+      </>
+    ),
+  },
+  {
+    title: "Chat Aoba",
+    description: "💌 Aoba is a 2D AI assistant powered by Gemini model",
+    link: "https://chat-aoba.vercel.app",
     tools: (
       <>
         <SiTypescript />
@@ -36,6 +51,19 @@ const projectData: projectType[] = [
         <SiExpress />
         <SiTailwindcss />
         <SiDaisyui />
+      </>
+    ),
+  },
+  {
+    title: "BIMSQ Sort Visualizer",
+    description:
+      "BIMSQ is an abbreviation for Bubble Sort, Insertion Sort, Merge Sort, Selection Sort, and Quick Sort. This app will display a visualization of the five types of sorting above.",
+    link: "https://bimsq-sort.vercel.app",
+    tools: (
+      <>
+        <SiJavascript />
+        <SiReact />
+        <SiTailwindcss />
       </>
     ),
   },
@@ -53,19 +81,6 @@ const projectData: projectType[] = [
         <SiTailwindcss />
         <SiNextui />
         <SiFramer />
-      </>
-    ),
-  },
-  {
-    title: "BIMSQ Sort Visualizer",
-    description:
-      "BIMSQ is an abbreviation for Bubble Sort, Insertion Sort, Merge Sort, Selection Sort, and Quick Sort. This app will display a visualization of the five types of sorting above.",
-    link: "https://bimsq-sort.vercel.app/",
-    tools: (
-      <>
-        <SiJavascript />
-        <SiReact />
-        <SiTailwindcss />
       </>
     ),
   },
