@@ -11,9 +11,9 @@ export default function Home() {
         <Spotify />
       </div>
 
-      <div className="flex flex-col md:flex-row gap-6 py-4 justify-evenly">
-        <Project />
+      <div className="flex flex-col md:flex-row-reverse gap-6 py-4 justify-between">
         <Activities />
+        <Project />
       </div>
     </div>
   );

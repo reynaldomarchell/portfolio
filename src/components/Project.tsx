@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ChevronRight } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import {
   SiReact,
   SiJavascript,
@@ -17,10 +17,12 @@ import {
   SiNextdotjs,
   SiShadcnui,
 } from "react-icons/si";
+import Image from "next/image";
 
 type projectType = {
   title: string;
   description: string;
+  image: string;
   link: string;
   tools: React.ReactNode;
 };
@@ -30,6 +32,7 @@ const projectData: projectType[] = [
     title: "YumeNime",
     description:
       "🌙 YumeNime is an ad-free and responsive anime streaming website created using Next.js",
+    image: "/yumenime1.png",
     link: "https://yumenime.vercel.app",
     tools: (
       <>
@@ -43,6 +46,7 @@ const projectData: projectType[] = [
   {
     title: "Chat Aoba",
     description: "💌 Aoba is a 2D AI assistant powered by a Gemini model",
+    image: "/aoba1.png",
     link: "https://chat-aoba.vercel.app",
     tools: (
       <>
@@ -57,7 +61,8 @@ const projectData: projectType[] = [
   {
     title: "BIMSQ Sort Visualizer",
     description:
-      "BIMSQ is an abbreviation for Bubble Sort, Insertion Sort, Merge Sort, Selection Sort, and Quick Sort. This app will display a visualization of the five types of sorting above.",
+      "BIMSQ is an abbreviation for Bubble, Insertion, Merge, Selection, and Quick Sort. This app will display a visualization of the five types of sorting above.",
+    image: "/bimsq1.png",
     link: "https://bimsq-sort.vercel.app",
     tools: (
       <>
@@ -68,9 +73,24 @@ const projectData: projectType[] = [
     ),
   },
   {
+    title: "Bantur",
+    description:
+      "Introducing Bandung City Tour—a meticulously crafted itinerary designed to showcase the city highlights.",
+    image: "/bantur1.png",
+    link: "https://bantur.vercel.app",
+    tools: (
+      <>
+        <SiJavascript />
+        <SiReact />
+        <SiLeaflet />
+      </>
+    ),
+  },
+  {
     title: "Restoranku",
     description:
       "Restoranku is a powerful dashboard page designed to assist restaurant owners in efficiently monitoring and managing their operations.",
+    image: "/restoranku1.png",
     link: "https://github.com/reynaldomarchell/restoranku.git",
     tools: (
       <>
@@ -84,22 +104,11 @@ const projectData: projectType[] = [
       </>
     ),
   },
-  {
-    title: "Bantur",
-    description:
-      "Introducing Bandung City Tour—a meticulously crafted itinerary designed to showcase the city highlights.",
-    link: "https://github.com/reynaldomarchell/bantur.git",
-    tools: (
-      <>
-        <SiJavascript />
-        <SiReact />
-        <SiLeaflet />
-      </>
-    ),
-  },
+
   {
     title: "Movie List",
     description: "Create a list for your favorite movies.",
+    image: "/movie-list1.png",
     link: "https://github.com/reynaldomarchell/movie-list",
     tools: (
       <>
@@ -112,6 +121,7 @@ const projectData: projectType[] = [
     title: "Apparance",
     description:
       'E-commerce project "Apparance" is a online fashion shop for selling or buying clothes, hoodie, sneakers, etc.',
+    image: "/apparance1.png",
     link: "https://github.com/reynaldomarchell/FinalProject-BackendDevelopment-2022.git",
     tools: (
       <>
@@ -126,6 +136,7 @@ const projectData: projectType[] = [
     title: "To-do",
     description:
       "To-do list web page using PHP and MySQL as a database for storing user account and each user task.",
+    image: "/todo3.png",
     link: "https://github.com/reynaldomarchell/MidProject-BackendDevelopment-2022.git",
     tools: (
       <>
@@ -138,11 +149,11 @@ const projectData: projectType[] = [
 
 export default function Project() {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 w-full">
       <h2 className="text-xl md:text-2xl text-slate-50 font-semibold">
         Projects
       </h2>
-      <div className="flex flex-col gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {projectData.map((project) => (
           <ProjectItem key={project.title} {...project} />
         ))}
@@ -151,16 +162,25 @@ export default function Project() {
   );
 }
 
-function ProjectItem({ title, description, link, tools }: projectType) {
+function ProjectItem({ title, description, image, link, tools }: projectType) {
   return (
-    <Link href={link}>
-      <div className="border py-4 px-3 rounded-md space-y-2 hover:cursor-pointer hover:-translate-y-1 hover:translate-x-1 hover:transition-all hover:duration-500 hover:bg-slate-900 hover:text-slate-50">
-        <div className="flex justify-between items-center border-b-2">
-          <h3 className="text-lg font-semibold text-slate-50">{title}</h3>
-          <ChevronRight />
+    <Link href={link} target="_blank" rel="noreferrer">
+      <div className="border py-4 px-3 rounded-md flex flex-col gap-2 justify-start hover:cursor-pointer hover:-translate-y-1 hover:transition-all hover:duration-500 hover:bg-slate-900 hover:text-slate-50 h-full">
+        <Image
+          src={image}
+          alt={title}
+          width={500}
+          height={300}
+          className="object-cover h-36 md:h-48 w-full rounded-md"
+        />
+        <div className="flex flex-col justify-between h-full gap-2">
+          <div className="flex gap-2 items-center border-b-2 py-2">
+            <h3 className="text-lg font-semibold text-slate-50">{title}</h3>
+            <ExternalLink />
+          </div>
+          <p>{description}</p>
+          <p className="flex gap-2 text-2xl">{tools}</p>
         </div>
-        <p>{description}</p>
-        <p className="flex gap-2 text-2xl">{tools}</p>
       </div>
     </Link>
   );
