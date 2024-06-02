@@ -170,8 +170,8 @@ function ProjectItem({ title, description, image, link, tools }: projectType) {
           <Image
             src={image}
             alt={title}
-            width={500}
-            height={300}
+            width={640}
+            height={480}
             className="object-cover h-36 md:h-48 w-full rounded-md"
           />
         )}
