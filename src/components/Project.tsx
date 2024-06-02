@@ -4,18 +4,33 @@ import Link from "next/link";
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 import { projectData, projectType } from "./project-data";
+import { useEffect, useState } from "react";
 
 export default function Project() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
-    <div className="flex flex-col gap-4 w-full">
-      <h2 className="text-xl md:text-2xl text-slate-50 font-semibold">
-        Projects
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {projectData.map((project) => (
-          <ProjectItem key={project.title} {...project} />
-        ))}
-      </div>
+    <div>
+      {isClient ? (
+        <div className="flex flex-col gap-4 w-full">
+          <h2 className="text-xl md:text-2xl text-slate-50 font-semibold">
+            Projects
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {projectData.map((project) => (
+              <ProjectItem key={project.title} {...project} />
+            ))}
+          </div>
+        </div>
+      ) : (
+        <div className="flex justify-center items-center h-96">
+          <p>Loading...</p>
+        </div>
+      )}
     </div>
   );
 }
