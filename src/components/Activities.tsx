@@ -20,6 +20,7 @@ const languageData =
 
 export default function Activities() {
   const [language, setLanguage] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     async function fetchLanguage() {
@@ -28,6 +29,8 @@ export default function Activities() {
       setLanguage(data.data);
     }
     fetchLanguage();
+
+    setIsLoading(false);
   }, []);
 
   return (
@@ -35,11 +38,15 @@ export default function Activities() {
       <h2 className="text-xl md:text-2xl text-slate-50 font-semibold">
         Coding Activities
       </h2>
-      <div className="scrollbar-hide no-scrollbar flex h-72 flex-col gap-2 overflow-y-auto rounded-md border p-5 text-sm md:h-fit">
-        {language.map((item: languageType) => (
-          <ActivitiesItem key={item.name} {...item} />
-        ))}
-      </div>
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : (
+        <div className="scrollbar-hide no-scrollbar flex h-72 flex-col gap-2 overflow-y-auto rounded-md border p-5 text-sm md:h-fit">
+          {language.map((item: languageType) => (
+            <ActivitiesItem key={item.name} {...item} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
