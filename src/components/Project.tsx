@@ -167,14 +167,17 @@ function ProjectItem({ title, description, image, link, tools }: projectType) {
     <Link href={link} target="_blank" rel="noreferrer">
       <div className="border py-4 px-3 rounded-md flex flex-col gap-2 justify-start hover:cursor-pointer hover:-translate-y-1 hover:transition-all hover:duration-500 hover:bg-slate-900 hover:text-slate-50 h-full">
         {image && (
-          <Image
-            src={image}
-            alt={title}
-            width={1040}
-            height={880}
-            unoptimized
-            className="object-cover h-36 md:h-48 w-full rounded-md"
-          />
+          <div className="h-48 md:h-80 w-full overflow-hidden rounded-md">
+            <Image
+              src={image}
+              alt={title}
+              width={1040}
+              height={880}
+              unoptimized
+              className="object-cover h-full w-full "
+              priority
+            />
+          </div>
         )}
         <div className="flex flex-col justify-between h-full gap-2">
           <div className="flex gap-2 items-center border-b-2 py-2">
