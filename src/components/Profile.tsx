@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowDownToLine, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDownToLine, Github, Linkedin } from "lucide-react";
 
 export default function Profile() {
   return (
@@ -24,30 +24,25 @@ export default function Profile() {
         <p className="font-medium">Download my CV</p>
         <ArrowDownToLine />
       </Link>
-      <div className="flex gap-2">
+      <div className="flex gap-2 pt-2">
         <Link
           href="https://github.com/reynaldomarchell"
-          className="hover:-translate-y-0.5 hover:transition-all hover:duration-500"
+          className="hover:-translate-y-0.5 hover:transition-all hover:duration-500 flex gap-2 items-center"
           target="_blank"
           rel="noreferrer"
         >
           <Github />
+          <h2>GitHub</h2>
         </Link>
+        &bull;
         <Link
           href="https://www.linkedin.com/in/reynaldo-marchell/"
-          className="hover:-translate-y-0.5 hover:transition-all hover:duration-500"
+          className="hover:-translate-y-0.5 hover:transition-all hover:duration-500 flex gap-2 items-center"
           target="_blank"
           rel="noreferrer"
         >
           <Linkedin />
-        </Link>
-        <Link
-          href="mailto:reynaldomarchellba@gmail.com"
-          className="hover:-translate-y-0.5 hover:transition-all hover:duration-500"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Mail />
+          <h2>LinkedIn</h2>
         </Link>
       </div>
     </div>

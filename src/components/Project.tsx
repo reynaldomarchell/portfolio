@@ -165,7 +165,7 @@ export default function Project() {
 function ProjectItem({ title, description, image, link, tools }: projectType) {
   return (
     <Link href={link} target="_blank" rel="noreferrer">
-      <div className="border py-4 px-3 rounded-md flex flex-col gap-2 justify-start hover:cursor-pointer hover:-translate-y-1 hover:transition-all hover:duration-500 hover:bg-slate-900 hover:text-slate-50 h-full">
+      <div className="border py-4 px-3 rounded-md flex flex-col gap-2 justify-start hover:transition-all duration-300 hover:bg-slate-900 hover:text-slate-50 h-full ease-linear">
         {image && (
           <div className="h-48 md:h-80 w-full overflow-hidden rounded-md">
             <Image
