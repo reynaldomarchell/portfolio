@@ -33,7 +33,7 @@ const projectData: projectType[] = [
     description:
       "🌙 YumeNime is an ad-free and responsive anime streaming website created using Next.js",
     image: "/yumenime.png",
-    link: "https://yumenime.vercel.app",
+    link: "https://yumenime.rey.mba",
     tools: (
       <>
         <SiTypescript />
@@ -47,7 +47,7 @@ const projectData: projectType[] = [
     title: "Chat Aoba",
     description: "💌 Aoba is a 2D AI assistant powered by a Gemini model",
     image: "/aoba.png",
-    link: "https://chat-aoba.vercel.app",
+    link: "https://aoba.rey.mba",
     tools: (
       <>
         <SiTypescript />
@@ -63,7 +63,7 @@ const projectData: projectType[] = [
     description:
       "BIMSQ is an abbreviation for Bubble, Insertion, Merge, Selection, and Quick Sort. This app will display a visualization of the five types of sorting above.",
     image: "/bimsq.png",
-    link: "https://bimsq-sort.vercel.app",
+    link: "https://bimsq.rey.mba",
     tools: (
       <>
         <SiJavascript />
@@ -77,7 +77,7 @@ const projectData: projectType[] = [
     description:
       "Introducing Bandung City Tour—a meticulously crafted itinerary designed to showcase the city highlights.",
     image: "/bantur.png",
-    link: "https://bantur.vercel.app",
+    link: "https://bantur.rey.mba",
     tools: (
       <>
         <SiJavascript />
