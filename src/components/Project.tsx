@@ -59,6 +59,24 @@ const projectData: projectType[] = [
     ),
   },
   {
+    title: "Restoranku",
+    description:
+      "Restoranku is a powerful dashboard page designed to assist restaurant owners in efficiently monitoring and managing their operations.",
+    image: "/restoranku.png",
+    link: "https://restoranku.rey.mba",
+    tools: (
+      <>
+        <SiJavascript />
+        <SiReact />
+        <SiExpress />
+        <SiMysql />
+        <SiTailwindcss />
+        <SiNextui />
+        <SiFramer />
+      </>
+    ),
+  },
+  {
     title: "BIMSQ Sort Visualizer",
     description:
       "BIMSQ is an abbreviation for Bubble, Insertion, Merge, Selection, and Quick Sort. This app will display a visualization of the five types of sorting above.",
@@ -86,25 +104,6 @@ const projectData: projectType[] = [
       </>
     ),
   },
-  {
-    title: "Restoranku",
-    description:
-      "Restoranku is a powerful dashboard page designed to assist restaurant owners in efficiently monitoring and managing their operations.",
-    image: "/restoranku.png",
-    link: "https://github.com/reynaldomarchell/restoranku.git",
-    tools: (
-      <>
-        <SiJavascript />
-        <SiReact />
-        <SiExpress />
-        <SiMysql />
-        <SiTailwindcss />
-        <SiNextui />
-        <SiFramer />
-      </>
-    ),
-  },
-
   {
     title: "Movie List",
     description: "Create a list for your favorite movies.",
