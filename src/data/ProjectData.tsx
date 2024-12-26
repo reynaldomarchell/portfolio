@@ -19,6 +19,7 @@ import {
   SiTrpc,
   SiReactquery,
   SiCloudflare,
+  SiInertia,
 } from "react-icons/si";
 
 export type ProjectType = {
@@ -31,6 +32,26 @@ export type ProjectType = {
 };
 
 export const ProjectData: ProjectType[] = [
+  {
+    title: "GreenRise",
+    description:
+      "🌱 GreenRise is a web application dedicated to facilitating donations for environmental causes. We connect users with impactful events and provide a secure platform for contributing to a greener future.",
+    image: "/greenrise.svg",
+    link: "https://greenrise.rey.mba",
+    github: "https://github.com/reynaldomarchell/greenrise.git",
+    tools: (
+      <>
+        <SiTypescript />
+        <SiPhp />
+        <SiLaravel />
+        <SiReact />
+        <SiInertia />
+        <SiMysql />
+        <SiTailwindcss />
+        <SiShadcnui />
+      </>
+    ),
+  },
   {
     title: "NutriCek",
     description:
@@ -169,18 +190,6 @@ export const ProjectData: ProjectType[] = [
         <SiJavascript />
         <SiReact />
         <SiLeaflet />
-      </>
-    ),
-  },
-  {
-    title: "Movie List",
-    description: "Create a list for your favorite movies.",
-    image: "/movie-list.png",
-    github: "https://github.com/reynaldomarchell/movie-list.git",
-    tools: (
-      <>
-        <SiJavascript />
-        <SiReact />
       </>
     ),
   },
