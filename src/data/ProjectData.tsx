@@ -97,7 +97,7 @@ export const ProjectData: ProjectType[] = [
     description:
       "📝 QuizAI is an AI-based quiz app designed to make learning more fun, challenging, automated, personalized and customizable.",
     image: "/quizai.svg",
-    link: "https://quizai.jer.ee",
+    link: "https://quizai.rey.mba",
     github: "https://github.com/reynaldomarchell/srifoton-hack.git",
     tools: (
       <>
