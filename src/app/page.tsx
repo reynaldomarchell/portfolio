@@ -19,7 +19,7 @@ export default function Home() {
 
       <div className="mt-4 flex items-center justify-center w-full">
         <Link
-          href="mailto:reynaldomarchellba@gmail.com"
+          href="mailto:rmbagt@gmail.com"
           className="flex items-center justify-center gap-2 py-2 px-4 rounded-full hover:bg-slate-900 transition-all duration-300 ease-linear"
           target="_blank"
           rel="noreferrer"
