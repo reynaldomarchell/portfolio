@@ -33,6 +33,22 @@ export type ProjectType = {
 
 export const ProjectData: ProjectType[] = [
   {
+    title: "ConnectFriend",
+    description:
+      "👥 ConnectFriend is a social networking platform designed to help users connect with like-minded individuals based on shared hobbies and interests. It provides a fun and interactive way to make new friends and expand your social circle.",
+    image: "/connectfriend.svg",
+    link: "https://connectfriend.rey.mba",
+    github: "https://github.com/reynaldomarchell/connect-friend.git",
+    tools: (
+      <>
+        <SiPhp />
+        <SiLaravel />
+        <SiMysql />
+        <SiBootstrap />
+      </>
+    ),
+  },
+  {
     title: "GreenRise",
     description:
       "🌱 GreenRise is a web application dedicated to facilitating donations for environmental causes. We connect users with impactful events and provide a secure platform for contributing to a greener future.",
