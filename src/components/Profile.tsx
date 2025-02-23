@@ -16,7 +16,7 @@ export default function Profile() {
       <p>A person who loves to code and learn new things 💖</p>
 
       <Link
-        href="https://drive.google.com/file/d/1So5ALh_zso8nBrWIYUU2Eh59RVzO6OVY/view?usp=sharing"
+        href="https://drive.google.com/file/d/1PDpbRTb15VWnixckJjLAfadz0FT-Wgi3/view?usp=sharing"
         className="justify-center flex border rounded-md py-2 px-4 hover:bg-slate-900 hover:transition-all hover:duration-500 hover:cursor-pointer hover:text-slate-50 gap-2 items-center"
         target="_blank"
         rel="noreferrer"
