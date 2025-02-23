@@ -33,6 +33,26 @@ export type ProjectType = {
 
 export const ProjectData: ProjectType[] = [
   {
+    title: "NutriCek",
+    description:
+      "🍎 NutriCek is an AI-powered web application designed to help consumers quickly assess the nutritional content of packaged food and beverages.",
+    image: "/nutricek.svg",
+    link: "https://nutricek.rey.mba",
+    github: "https://github.com/reynaldomarchell/nutricek",
+    tools: (
+      <>
+        <SiTypescript />
+        <SiNextdotjs />
+        <SiPostgresql />
+        <SiPrisma />
+        <SiReactquery />
+        <SiCloudflare />
+        <SiTailwindcss />
+        <SiShadcnui />
+      </>
+    ),
+  },
+  {
     title: "Chat Aoba",
     description: "💌 Aoba is a 2D AI assistant powered by a Gemini model",
     image: "/aoba.png",
@@ -45,6 +65,26 @@ export const ProjectData: ProjectType[] = [
         <SiExpress />
         <SiTailwindcss />
         <SiDaisyui />
+      </>
+    ),
+  },
+  {
+    title: "QuizAI",
+    description:
+      "📝 QuizAI is an AI-based quiz app designed to make learning more fun, challenging, automated, personalized and customizable.",
+    image: "/quizai.svg",
+    link: "https://quizai.rey.mba",
+    github: "https://github.com/reynaldomarchell/srifoton-hack",
+    tools: (
+      <>
+        <SiTypescript />
+        <SiNextdotjs />
+        <SiPostgresql />
+        <SiPrisma />
+        <SiTrpc />
+        <SiReactquery />
+        <SiTailwindcss />
+        <SiShadcnui />
       </>
     ),
   },
@@ -79,46 +119,6 @@ export const ProjectData: ProjectType[] = [
         <SiReact />
         <SiInertia />
         <SiMysql />
-        <SiTailwindcss />
-        <SiShadcnui />
-      </>
-    ),
-  },
-  {
-    title: "NutriCek",
-    description:
-      "🍎 NutriCek is an AI-powered web application designed to help consumers quickly assess the nutritional content of packaged food and beverages.",
-    image: "/nutricek.svg",
-    link: "https://nutricek.rey.mba",
-    github: "https://github.com/reynaldomarchell/nutricek",
-    tools: (
-      <>
-        <SiTypescript />
-        <SiNextdotjs />
-        <SiPostgresql />
-        <SiPrisma />
-        <SiReactquery />
-        <SiCloudflare />
-        <SiTailwindcss />
-        <SiShadcnui />
-      </>
-    ),
-  },
-  {
-    title: "QuizAI",
-    description:
-      "📝 QuizAI is an AI-based quiz app designed to make learning more fun, challenging, automated, personalized and customizable.",
-    image: "/quizai.svg",
-    link: "https://quizai.rey.mba",
-    github: "https://github.com/reynaldomarchell/srifoton-hack",
-    tools: (
-      <>
-        <SiTypescript />
-        <SiNextdotjs />
-        <SiPostgresql />
-        <SiPrisma />
-        <SiTrpc />
-        <SiReactquery />
         <SiTailwindcss />
         <SiShadcnui />
       </>
