@@ -33,6 +33,22 @@ export type ProjectType = {
 
 export const ProjectData: ProjectType[] = [
   {
+    title: "Chat Aoba",
+    description: "💌 Aoba is a 2D AI assistant powered by a Gemini model",
+    image: "/aoba.png",
+    link: "https://aoba.rey.mba",
+    github: "https://github.com/reynaldomarchell/chat-aoba",
+    tools: (
+      <>
+        <SiTypescript />
+        <SiReact />
+        <SiExpress />
+        <SiTailwindcss />
+        <SiDaisyui />
+      </>
+    ),
+  },
+  {
     title: "ConnectFriend",
     description:
       "👥 ConnectFriend is a social networking platform designed to help users connect with like-minded individuals based on shared hobbies and interests. It provides a fun and interactive way to make new friends and expand your social circle.",
@@ -125,22 +141,6 @@ export const ProjectData: ProjectType[] = [
         <SiReactquery />
         <SiTailwindcss />
         <SiShadcnui />
-      </>
-    ),
-  },
-  {
-    title: "Chat Aoba",
-    description: "💌 Aoba is a 2D AI assistant powered by a Gemini model",
-    image: "/aoba.png",
-    link: "https://aoba.rey.mba",
-    github: "https://github.com/reynaldomarchell/chat-aoba",
-    tools: (
-      <>
-        <SiTypescript />
-        <SiReact />
-        <SiExpress />
-        <SiTailwindcss />
-        <SiDaisyui />
       </>
     ),
   },
