@@ -22,6 +22,8 @@ import {
   SiInertia,
   SiSwift,
   SiApple,
+  SiVitess,
+  SiInternetcomputer,
 } from "react-icons/si";
 
 export type ProjectType = {
@@ -34,6 +36,25 @@ export type ProjectType = {
 };
 
 export const ProjectData: ProjectType[] = [
+  {
+    title: "PiCO",
+    description:
+      "🎨 Pico is a social media platform and NFT marketplace designed to empower artists in this rapidly evolving landscape by prioritizing authorship, authenticity, and transparency. We’re building a creative space where artists can share, mint, and connectwithout the fear of being miscredited or lost in the noise of untagged AI content.",
+    image: "/pico.png",
+    link: "https://eueyk-uiaaa-aaaap-qp4la-cai.icp0.io",
+    github: "https://github.com/WeGoWinPrikitiw/pico",
+    tools: (
+      <>
+        <SiInternetcomputer />
+        <SiTypescript />
+        <SiReact />
+        <SiReactquery />
+        <SiVitess />
+        <SiCloudflare />
+        <SiTailwindcss />
+      </>
+    ),
+  },
   {
     title: "Sepik",
     description:
