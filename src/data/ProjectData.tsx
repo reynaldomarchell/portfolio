@@ -60,6 +60,7 @@ export const ProjectData: ProjectType[] = [
     description:
       "🎤 Sepik is an advanced iOS application designed to help users improve their public speaking skills through comprehensive video analysis. Using cutting-edge machine learning and computer vision technologies, Sepik analyzes speaking practice videos to provide detailed feedback on facial expressions, speech patterns, eye contact, and overall performance.",
     image: "/sepik.png",
+    link: "https://testflight.apple.com/join/ejUKYhwB",
     github: "https://github.com/reynaldomarchell/sepik",
     tools: (
       <>
