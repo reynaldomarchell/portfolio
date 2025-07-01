@@ -39,7 +39,7 @@ export const ProjectData: ProjectType[] = [
   {
     title: "PiCO",
     description:
-      "🎨 Pico is a social media platform and NFT marketplace designed to empower artists in this rapidly evolving landscape by prioritizing authorship, authenticity, and transparency. We’re building a creative space where artists can share, mint, and connectwithout the fear of being miscredited or lost in the noise of untagged AI content.",
+      "🎨 Pico is a social media platform and NFT marketplace designed to empower artists in this rapidly evolving landscape by prioritizing authorship, authenticity, and transparency.",
     image: "/pico.png",
     link: "https://eueyk-uiaaa-aaaap-qp4la-cai.icp0.io",
     github: "https://github.com/WeGoWinPrikitiw/pico",
@@ -58,7 +58,7 @@ export const ProjectData: ProjectType[] = [
   {
     title: "Sepik",
     description:
-      "🎤 Sepik is an advanced iOS application designed to help users improve their public speaking skills through comprehensive video analysis. Using cutting-edge machine learning and computer vision technologies, Sepik analyzes speaking practice videos to provide detailed feedback on facial expressions, speech patterns, eye contact, and overall performance.",
+      "🎤 Sepik is an advanced iOS application designed to help users improve their public speaking skills through comprehensive video analysis.",
     image: "/sepik.png",
     link: "https://testflight.apple.com/join/ejUKYhwB",
     github: "https://github.com/reynaldomarchell/sepik",
@@ -72,7 +72,7 @@ export const ProjectData: ProjectType[] = [
   {
     title: "BLink",
     description:
-      "🚎 BLink is a mobile application designed to help users scan bus plate numbers and instantly access route information, schedules, and navigation assistance for the BSD City bus network. It provides a seamless way to navigate public transportation with real-time information.",
+      "🚎 BLink is a mobile application designed to help users scan bus plate numbers and instantly access route information, schedules, and navigation assistance for the BSD City bus network.",
     image: "/Blink.svg",
     github: "https://github.com/reynaldomarchell/BLinkNew",
     tools: (
