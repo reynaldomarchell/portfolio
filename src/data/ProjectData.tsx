@@ -20,6 +20,8 @@ import {
   SiReactquery,
   SiCloudflare,
   SiInertia,
+  SiSwift,
+  SiApple,
 } from "react-icons/si";
 
 export type ProjectType = {
@@ -32,6 +34,32 @@ export type ProjectType = {
 };
 
 export const ProjectData: ProjectType[] = [
+  {
+    title: "Sepik",
+    description:
+      "🎤 Sepik is an advanced iOS application designed to help users improve their public speaking skills through comprehensive video analysis. Using cutting-edge machine learning and computer vision technologies, Sepik analyzes speaking practice videos to provide detailed feedback on facial expressions, speech patterns, eye contact, and overall performance.",
+    image: "/sepik.png",
+    github: "https://github.com/reynaldomarchell/sepik",
+    tools: (
+      <>
+        <SiSwift />
+        <SiApple />
+      </>
+    ),
+  },
+  {
+    title: "BLink",
+    description:
+      "🚎 BLink is a mobile application designed to help users scan bus plate numbers and instantly access route information, schedules, and navigation assistance for the BSD City bus network. It provides a seamless way to navigate public transportation with real-time information.",
+    image: "/Blink.svg",
+    github: "https://github.com/reynaldomarchell/BLinkNew",
+    tools: (
+      <>
+        <SiSwift />
+        <SiApple />
+      </>
+    ),
+  },
   {
     title: "NutriCek",
     description:
@@ -141,55 +169,6 @@ export const ProjectData: ProjectType[] = [
         <SiReactquery />
         <SiTailwindcss />
         <SiShadcnui />
-      </>
-    ),
-  },
-  {
-    title: "Restoranku",
-    description:
-      "Restoranku is a powerful dashboard page designed to assist restaurant owners in efficiently monitoring and managing their operations.",
-    image: "/restoranku.png",
-    link: "https://restoranku.rey.mba",
-    github: "https://github.com/reynaldomarchell/restoranku",
-    tools: (
-      <>
-        <SiJavascript />
-        <SiReact />
-        <SiExpress />
-        <SiMysql />
-        <SiTailwindcss />
-        <SiNextui />
-        <SiFramer />
-      </>
-    ),
-  },
-  {
-    title: "BIMSQ Sort Visualizer",
-    description:
-      "BIMSQ is an abbreviation for Bubble, Insertion, Merge, Selection, and Quick Sort. This app will display a visualization of the five types of sorting above.",
-    image: "/bimsq.png",
-    link: "https://bimsq.rey.mba",
-    github: "https://github.com/reynaldomarchell/bimsq-sort",
-    tools: (
-      <>
-        <SiJavascript />
-        <SiReact />
-        <SiTailwindcss />
-      </>
-    ),
-  },
-  {
-    title: "Bantur",
-    description:
-      "Introducing Bandung City Tour—a meticulously crafted itinerary designed to showcase the city highlights.",
-    image: "/bantur.png",
-    link: "https://bantur.rey.mba",
-    github: "https://github.com/reynaldomarchell/bantur",
-    tools: (
-      <>
-        <SiJavascript />
-        <SiReact />
-        <SiLeaflet />
       </>
     ),
   },

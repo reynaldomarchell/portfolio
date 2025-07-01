@@ -48,7 +48,6 @@ const FlippableProjectCard = ({
             <div className="flex flex-col justify-between h-full gap-2">
               <div className="flex gap-2 items-center border-b-2 py-2">
                 <h3 className="text-lg font-semibold text-slate-50">{title}</h3>
-                <ExternalLink className="h-4 w-4" />
               </div>
               <p className="text-sm md:text-base">{description}</p>
               <p className="flex gap-2 text-xl md:text-2xl">{tools}</p>
