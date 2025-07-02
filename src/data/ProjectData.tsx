@@ -60,7 +60,7 @@ export const ProjectData: ProjectType[] = [
     description:
       "🎤 Sepik is an advanced iOS application designed to help users improve their public speaking skills through comprehensive video analysis.",
     image: "/sepik.png",
-    link: "https://testflight.apple.com/join/ejUKYhwB",
+    link: "https://apps.apple.com/id/app/sepik/id6747465256",
     github: "https://github.com/reynaldomarchell/sepik",
     tools: (
       <>
