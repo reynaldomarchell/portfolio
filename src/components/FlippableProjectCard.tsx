@@ -74,7 +74,7 @@ const FlippableProjectCard = ({
                   <div className="p-4 rounded-full bg-slate-900 group-hover:bg-slate-800 transition-colors">
                     <Eye className="w-8 h-8" />
                   </div>
-                  <span className="text-sm">Visit Site</span>
+                  <span className="text-sm">View Product</span>
                 </Link>
               )}
 
