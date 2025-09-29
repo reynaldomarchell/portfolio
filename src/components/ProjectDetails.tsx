@@ -1,16 +1,7 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowLeft,
-  ExternalLink,
-  Github,
-  Calendar,
-  Code,
-  Eye,
-} from "lucide-react";
+import { ArrowLeft, ExternalLink, Github, Code, Eye } from "lucide-react";
 import { ProjectType } from "@/data/ProjectData";
 
 interface ProjectDetailsProps {
@@ -25,11 +16,11 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
       {/* Navigation */}
       <div className="mb-8">
         <Link
-          href="/"
+          href="/projects"
           className="inline-flex items-center gap-2 text-slate-400 hover:text-slate-200 transition-colors duration-300"
         >
           <ArrowLeft className="w-4 h-4" />
-          Back to Portfolio
+          Back to Projects
         </Link>
       </div>
 

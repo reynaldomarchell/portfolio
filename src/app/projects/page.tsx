@@ -1,48 +1,38 @@
-import React from "react";
-import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+"use client";
+
+import React, { useState } from "react";
 import { ProjectData } from "@/data/ProjectData";
 import ProjectCard from "@/components/ProjectCard";
 import PageWrapper from "@/components/PageWrapper";
+import FloatingTabs from "@/components/FloatingTabs";
 
 export default function ProjectsPage() {
+  const [activeTab, setActiveTab] = useState("projects");
+
   return (
-    <PageWrapper>
-      <div className="max-w-6xl mx-auto">
-        {/* Navigation */}
-        <div className="mb-8">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-slate-400 hover:text-slate-200 transition-colors duration-300"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Back to Portfolio
-          </Link>
-        </div>
+    <>
+      <FloatingTabs activeTab={activeTab} setActiveTab={setActiveTab} />
+      <PageWrapper>
+        <div className="max-w-4xl mx-auto">
+          {/* Page Header */}
+          <div className="mb-12">
+            <h1 className="text-3xl md:text-4xl font-bold text-slate-50 mb-4">
+              All Projects
+            </h1>
+            <p className="text-lg text-slate-300">
+              Explore my complete collection of projects, showcasing various
+              technologies and solutions.
+            </p>
+          </div>
 
-        {/* Page Header */}
-        <div className="mb-12">
-          <h1 className="text-3xl md:text-4xl font-bold text-slate-50 mb-4">
-            All Projects
-          </h1>
-          <p className="text-lg text-slate-300">
-            Explore my complete collection of projects, showcasing various
-            technologies and solutions.
-          </p>
+          {/* Projects Grid */}
+          <div className="flex flex-col gap-6">
+            {ProjectData.map((project) => (
+              <ProjectCard key={project.title} {...project} />
+            ))}
+          </div>
         </div>
-
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {ProjectData.map((project) => (
-            <ProjectCard key={project.title} {...project} />
-          ))}
-        </div>
-      </div>
-    </PageWrapper>
+      </PageWrapper>
+    </>
   );
 }
-
-export const metadata = {
-  title: "All Projects - Portfolio",
-  description: "Explore my complete collection of projects and applications.",
-};

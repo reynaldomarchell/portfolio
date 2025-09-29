@@ -1,7 +1,7 @@
 import React from "react";
 import { notFound } from "next/navigation";
 import { ProjectData } from "@/data/ProjectData";
-import ProjectDetails from "@/components/ProjectDetails";
+import ProjectDetailsWrapper from "@/components/ProjectDetailsWrapper";
 import PageWrapper from "@/components/PageWrapper";
 
 interface ProjectPageProps {
@@ -31,7 +31,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <PageWrapper>
-      <ProjectDetails project={project} />
+      <ProjectDetailsWrapper project={project} />
     </PageWrapper>
   );
 }
