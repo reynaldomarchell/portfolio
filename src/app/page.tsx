@@ -18,7 +18,7 @@ export default function Home() {
     switch (activeTab) {
       case "profile":
         return (
-          <div className="space-y-8">
+          <div className="max-w-4xl mx-auto">
             <div className="flex flex-col lg:flex-row gap-8 justify-between">
               <div className="flex-1">
                 <Profile />
@@ -26,40 +26,20 @@ export default function Home() {
               <div className="hidden lg:block">
                 <Spotify />
               </div>
-            </div>
-            {/* Get in touch button - moved outside and centered */}
-            <div className="flex items-center justify-center w-full">
-              <Link
-                href="mailto:rmbagt@gmail.com"
-                className="flex items-center justify-center gap-2 py-2 px-4 rounded-full hover:bg-slate-900 transition-all duration-300 ease-linear"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <h1 className="text-slate-500 font-semibold md:text-xl">
-                  Get in touch
-                </h1>
-                <div className="items-center flex gap-2 font-semibold text-slate-200 md:text-xl">
-                  <span className="relative flex h-3 w-3">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-300 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-3 w-3 bg-slate-300"></span>
-                  </span>
-                  <h1>with me</h1>
-                </div>
-              </Link>
             </div>
           </div>
         );
       case "projects":
-        return <Project />;
+        return <div className="max-w-4xl mx-auto"><Project /></div>;
       case "experience":
-        return <WorkExperience />;
+        return <div className="max-w-4xl mx-auto"><WorkExperience /></div>;
       case "education":
-        return <Education />;
+        return <div className="max-w-4xl mx-auto"><Education /></div>;
       case "awards":
-        return <Awards />;
+        return <div className="max-w-4xl mx-auto"><Awards /></div>;
       default:
         return (
-          <div className="space-y-8">
+          <div className="max-w-4xl mx-auto">
             <div className="flex flex-col lg:flex-row gap-8 justify-between">
               <div className="flex-1">
                 <Profile />
@@ -67,26 +47,6 @@ export default function Home() {
               <div className="hidden lg:block">
                 <Spotify />
               </div>
-            </div>
-            {/* Get in touch button - moved outside and centered */}
-            <div className="flex items-center justify-center w-full">
-              <Link
-                href="mailto:rmbagt@gmail.com"
-                className="flex items-center justify-center gap-2 py-2 px-4 rounded-full hover:bg-slate-900 transition-all duration-300 ease-linear"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <h1 className="text-slate-500 font-semibold md:text-xl">
-                  Get in touch
-                </h1>
-                <div className="items-center flex gap-2 font-semibold text-slate-200 md:text-xl">
-                  <span className="relative flex h-3 w-3">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-300 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-3 w-3 bg-slate-300"></span>
-                  </span>
-                  <h1>with me</h1>
-                </div>
-              </Link>
             </div>
           </div>
         );
@@ -97,6 +57,25 @@ export default function Home() {
     <>
       <FloatingTabs activeTab={activeTab} setActiveTab={setActiveTab} />
       <PageWrapper>{renderTabContent()}</PageWrapper>
+      <div className="fixed bottom-6 left-0 right-0 flex items-center justify-center z-50">
+        <Link
+          href="mailto:rmbagt@gmail.com"
+          className="flex items-center justify-center gap-2 py-2 px-4 rounded-full bg-slate-950/80 backdrop-blur-md border border-slate-700 hover:bg-slate-900 transition-all duration-300 ease-linear shadow-lg"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <h1 className="text-slate-500 font-semibold md:text-xl">
+            Get in touch
+          </h1>
+          <div className="items-center flex gap-2 font-semibold text-slate-200 md:text-xl">
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-300 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-slate-300"></span>
+            </span>
+            <h1>with me</h1>
+          </div>
+        </Link>
+      </div>
     </>
   );
 }

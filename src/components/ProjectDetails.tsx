@@ -87,66 +87,24 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
       )}
 
       {/* Project Details Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-        <div className="space-y-6">
-          <div>
-            <h3 className="text-lg font-semibold text-slate-50 mb-3">
-              Project Overview
-            </h3>
-            <p className="text-slate-300 leading-relaxed">{description}</p>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold text-slate-50 mb-3">
-              Key Features
-            </h3>
-            <ul className="text-slate-300 space-y-2">
-              <li>• Modern and responsive design</li>
-              <li>• Built with latest technologies</li>
-              <li>• Optimized for performance</li>
-              <li>• Cross-platform compatibility</li>
-            </ul>
-          </div>
+      <div className="mb-8 space-y-6">
+        <div>
+          <h3 className="text-lg font-semibold text-slate-50 mb-3">
+            Project Overview
+          </h3>
+          <p className="text-slate-300 leading-relaxed">{description}</p>
         </div>
 
-        <div className="space-y-6">
-          <div>
-            <h3 className="text-lg font-semibold text-slate-50 mb-3">
-              Project Links
-            </h3>
-            <div className="space-y-2">
-              {link && (
-                <Link
-                  href={link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center gap-2 text-slate-300 hover:text-slate-100 transition-colors"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                  Live Demo
-                </Link>
-              )}
-              <Link
-                href={github}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2 text-slate-300 hover:text-slate-100 transition-colors"
-              >
-                <Github className="w-4 h-4" />
-                Source Code
-              </Link>
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold text-slate-50 mb-3">
-              Development
-            </h3>
-            <p className="text-slate-300">
-              This project showcases modern web development practices and
-              demonstrates proficiency in full-stack development.
-            </p>
-          </div>
+        <div>
+          <h3 className="text-lg font-semibold text-slate-50 mb-3">
+            Key Features
+          </h3>
+          <ul className="text-slate-300 space-y-2">
+            <li>• Modern and responsive design</li>
+            <li>• Built with latest technologies</li>
+            <li>• Optimized for performance</li>
+            <li>• Cross-platform compatibility</li>
+          </ul>
         </div>
       </div>
     </div>

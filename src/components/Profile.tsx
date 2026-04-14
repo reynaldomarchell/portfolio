@@ -47,15 +47,6 @@ export default function Profile() {
       </h1>
       <p>A person who loves to code and learn new things 💖</p>
 
-      <Link
-        href="https://drive.google.com/file/d/1R1PhipMSh2bPD4lDpU6eA4C3fFLaglX3/view?usp=sharing"
-        className="justify-center flex border rounded-md py-2 px-4 hover:bg-slate-900 hover:transition-all hover:duration-500 hover:cursor-pointer hover:text-slate-50 gap-2 items-center"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <p className="font-medium">Download my CV</p>
-        <ArrowDownToLine />
-      </Link>
       <div className="flex gap-2 pt-2">
         <Link
           href="https://github.com/reynaldomarchell"
