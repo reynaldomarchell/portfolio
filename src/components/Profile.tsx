@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { ArrowDownToLine, Github, Linkedin } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
@@ -20,7 +21,11 @@ type languageType = {
 const languageData =
   "https://wakatime.com/share/@reynaldomarchell/42ddf4c4-6b8c-4666-9a74-d30cf7d94c2d.json";
 
-export default function Profile() {
+export default function Profile({
+  spotifySlot,
+}: {
+  spotifySlot?: React.ReactNode;
+}) {
   const [language, setLanguage] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -68,6 +73,8 @@ export default function Profile() {
           <h2>LinkedIn</h2>
         </Link>
       </div>
+
+      {spotifySlot && <div className="lg:hidden">{spotifySlot}</div>}
 
       {/* Coding Activities Section */}
       <div className="flex flex-col gap-4">
