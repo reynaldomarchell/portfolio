@@ -21,7 +21,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col lg:flex-row gap-8 justify-between">
               <div className="flex-1">
-                <Profile />
+                <Profile spotifySlot={<Spotify />} />
               </div>
               <div className="hidden lg:block">
                 <Spotify />
@@ -42,7 +42,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col lg:flex-row gap-8 justify-between">
               <div className="flex-1">
-                <Profile />
+                <Profile spotifySlot={<Spotify />} />
               </div>
               <div className="hidden lg:block">
                 <Spotify />
