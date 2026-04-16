@@ -13,6 +13,7 @@ export const WorkExperienceData: WorkExperienceType[] = [
     company: "PT Bank Mandiri (Persero) Tbk.",
     location: "Jakarta Raya, Indonesia · Onsite",
     position: "Officer Development Program IT",
+    employmentType: "Full-time",
     duration: "Mar 2026 - Present",
     description: [],
     skills: [],
@@ -26,11 +27,7 @@ export const WorkExperienceData: WorkExperienceType[] = [
     description: [
       "Develop an iOS application using React Native Expo and migrate the iOS legacy modules to the new React Native application.",
     ],
-    skills: [
-      "React Native",
-      "TypeScript",
-      "Expo",
-    ],
+    skills: ["React Native", "TypeScript", "Expo"],
   },
   {
     company: "Taiwan Mobile",
