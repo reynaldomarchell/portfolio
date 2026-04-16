@@ -38,7 +38,7 @@ const ProjectCard = ({
                 {title}
               </h3>
             </div>
-            <p className="text-sm md:text-base text-slate-300 leading-relaxed">
+            <p className="text-sm md:text-base text-slate-300 leading-relaxed line-clamp-2">
               {description}
             </p>
           </div>
