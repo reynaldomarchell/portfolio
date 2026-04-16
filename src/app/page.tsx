@@ -1,26 +1,66 @@
+"use client";
+
+import { useState } from "react";
 import Profile from "@/components/Profile";
 import Spotify from "@/components/Spotify";
 import Project from "@/components/Project";
-import Activities from "@/components/Activities";
+import WorkExperience from "@/components/WorkExperience";
+import Education from "@/components/Education";
+import Awards from "@/components/Awards";
+import PageWrapper from "@/components/PageWrapper";
+import FloatingTabs from "@/components/FloatingTabs";
 import Link from "next/link";
 
 export default function Home() {
+  const [activeTab, setActiveTab] = useState("profile");
+
+  const renderTabContent = () => {
+    switch (activeTab) {
+      case "profile":
+        return (
+          <div className="max-w-4xl mx-auto">
+            <div className="flex flex-col lg:flex-row gap-8 justify-between">
+              <div className="flex-1">
+                <Profile spotifySlot={<Spotify />} />
+              </div>
+              <div className="hidden lg:block">
+                <Spotify />
+              </div>
+            </div>
+          </div>
+        );
+      case "projects":
+        return <div className="max-w-4xl mx-auto"><Project /></div>;
+      case "experience":
+        return <div className="max-w-4xl mx-auto"><WorkExperience /></div>;
+      case "education":
+        return <div className="max-w-4xl mx-auto"><Education /></div>;
+      case "awards":
+        return <div className="max-w-4xl mx-auto"><Awards /></div>;
+      default:
+        return (
+          <div className="max-w-4xl mx-auto">
+            <div className="flex flex-col lg:flex-row gap-8 justify-between">
+              <div className="flex-1">
+                <Profile spotifySlot={<Spotify />} />
+              </div>
+              <div className="hidden lg:block">
+                <Spotify />
+              </div>
+            </div>
+          </div>
+        );
+    }
+  };
+
   return (
-    <div className="flex flex-col h-full justify-start py-6 px-5 lg:px-24 font-mono">
-      <div className="flex flex-col md:flex-row gap-6 py-4 justify-between md:items-center">
-        <Profile />
-        <Spotify />
-      </div>
-
-      <div className="flex flex-col md:flex-row-reverse gap-12 md:gap-6 py-4 justify-between">
-        <Activities />
-        <Project />
-      </div>
-
-      <div className="mt-4 flex items-center justify-center w-full">
+    <>
+      <FloatingTabs activeTab={activeTab} setActiveTab={setActiveTab} />
+      <PageWrapper>{renderTabContent()}</PageWrapper>
+      <div className="fixed bottom-6 left-0 right-0 flex items-center justify-center z-50">
         <Link
           href="mailto:rmbagt@gmail.com"
-          className="flex items-center justify-center gap-2 py-2 px-4 rounded-full hover:bg-slate-900 transition-all duration-300 ease-linear"
+          className="flex items-center justify-center gap-2 py-2 px-4 rounded-full bg-slate-950/80 backdrop-blur-md border border-slate-700 hover:bg-slate-900 transition-all duration-300 ease-linear shadow-lg"
           target="_blank"
           rel="noreferrer"
         >
@@ -36,6 +76,6 @@ export default function Home() {
           </div>
         </Link>
       </div>
-    </div>
+    </>
   );
 }

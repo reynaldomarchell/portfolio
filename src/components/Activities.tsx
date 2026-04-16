@@ -42,7 +42,7 @@ export default function Activities() {
         <p>Loading...</p>
       ) : (
         <div className="scrollbar-hide no-scrollbar flex h-72 flex-col gap-2 overflow-y-auto rounded-md border p-5 text-sm md:h-fit">
-          {language.map((item: languageType) => (
+          {language.slice(0, 10).map((item: languageType) => (
             <ActivitiesItem key={item.name} {...item} />
           ))}
         </div>
