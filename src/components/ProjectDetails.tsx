@@ -9,7 +9,7 @@ interface ProjectDetailsProps {
 }
 
 const ProjectDetails = ({ project }: ProjectDetailsProps) => {
-  const { title, description, image, link, github, tools } = project;
+  const { title, description, image, link, github, tools, features } = project;
 
   return (
     <div className="max-w-4xl mx-auto">
@@ -29,7 +29,6 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
         <h1 className="text-3xl md:text-4xl font-bold text-slate-50 mb-4">
           {title}
         </h1>
-        <p className="text-lg text-slate-300 leading-relaxed">{description}</p>
       </div>
 
       {/* Project Image */}
@@ -95,17 +94,18 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
           <p className="text-slate-300 leading-relaxed">{description}</p>
         </div>
 
-        <div>
-          <h3 className="text-lg font-semibold text-slate-50 mb-3">
-            Key Features
-          </h3>
-          <ul className="text-slate-300 space-y-2">
-            <li>• Modern and responsive design</li>
-            <li>• Built with latest technologies</li>
-            <li>• Optimized for performance</li>
-            <li>• Cross-platform compatibility</li>
-          </ul>
-        </div>
+        {features && features.length > 0 && (
+          <div>
+            <h3 className="text-lg font-semibold text-slate-50 mb-3">
+              Key Features
+            </h3>
+            <ul className="text-slate-300 space-y-2">
+              {features.map((feature, index) => (
+                <li key={index}>• {feature}</li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );
