@@ -14,7 +14,7 @@ export const EducationData: EducationType[] = [
     duration: "2022 - 2026",
     gpa: "3.83 out of 4.00",
     description:
-      "Thesis: 'Analysis and implementation of an LLM-based Bitcoin price prediction system using agentic, image, and sentiment methods.'",
+      "Thesis: Analysis and implementation of an LLM-based Bitcoin price prediction system using agentic, image, and sentiment methods.",
   },
   {
     institution: "Chung Yuan Christian University",
