@@ -1,8 +1,9 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { useRouter, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 import {
   User,
   Briefcase,
@@ -60,21 +61,7 @@ export default function FloatingTabs({
   activeTab,
   setActiveTab,
 }: FloatingTabsProps) {
-  const router = useRouter();
   const pathname = usePathname();
-
-  const handleTabClick = (tab: TabType) => {
-    if (tab.href === "/" && pathname === "/") {
-      // If we're already on home and clicking profile, just switch tab
-      setActiveTab(tab.id);
-    } else if (tab.href === "/" && pathname !== "/") {
-      // If we're on another page and clicking profile, go to home
-      router.push(tab.href);
-    } else {
-      // For all other cases, navigate to the respective page
-      router.push(tab.href);
-    }
-  };
 
   const getActiveTab = () => {
     if (pathname === "/") return activeTab;
@@ -86,6 +73,14 @@ export default function FloatingTabs({
     return "profile";
   };
 
+  const tabLinkClass = (tabId: string) =>
+    cn(
+      "relative p-3 rounded-full transition-all duration-300 group inline-flex",
+      getActiveTab() === tabId
+        ? "bg-slate-50 text-slate-900"
+        : "text-slate-300 hover:text-slate-50 hover:bg-slate-800",
+    );
+
   return (
     <>
       {/* Desktop - Left side */}
@@ -93,16 +88,20 @@ export default function FloatingTabs({
         <div className="bg-slate-900/80 backdrop-blur-md border border-slate-700 rounded-full p-2 shadow-lg">
           <div className="flex flex-col gap-1">
             {tabs.map((tab) => (
-              <button
+              <Link
                 key={tab.id}
-                onClick={() => handleTabClick(tab)}
-                className={cn(
-                  "relative p-3 rounded-full transition-all duration-300 group",
-                  getActiveTab() === tab.id
-                    ? "bg-slate-50 text-slate-900"
-                    : "text-slate-300 hover:text-slate-50 hover:bg-slate-800"
-                )}
+                href={tab.href}
+                prefetch
+                scroll={false}
+                onClick={(e) => {
+                  if (tab.href === "/" && pathname === "/") {
+                    e.preventDefault();
+                    setActiveTab(tab.id);
+                  }
+                }}
+                className={tabLinkClass(tab.id)}
                 title={tab.label}
+                aria-label={tab.label}
               >
                 {tab.icon}
 
@@ -110,7 +109,7 @@ export default function FloatingTabs({
                 <div className="absolute left-full ml-2 top-1/2 -translate-y-1/2 px-2 py-1 bg-slate-800 text-slate-200 text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap">
                   {tab.label}
                 </div>
-              </button>
+              </Link>
             ))}
           </div>
         </div>
@@ -122,19 +121,23 @@ export default function FloatingTabs({
           <div className="bg-slate-900/80 backdrop-blur-md border border-slate-700 rounded-full p-2 shadow-lg">
             <div className="flex gap-1">
               {tabs.map((tab) => (
-                <button
+                <Link
                   key={tab.id}
-                  onClick={() => handleTabClick(tab)}
-                  className={cn(
-                    "relative p-3 rounded-full transition-all duration-300 group",
-                    getActiveTab() === tab.id
-                      ? "bg-slate-50 text-slate-900"
-                      : "text-slate-300 hover:text-slate-50 hover:bg-slate-800"
-                  )}
+                  href={tab.href}
+                  prefetch
+                  scroll={false}
+                  onClick={(e) => {
+                    if (tab.href === "/" && pathname === "/") {
+                      e.preventDefault();
+                      setActiveTab(tab.id);
+                    }
+                  }}
+                  className={tabLinkClass(tab.id)}
                   title={tab.label}
+                  aria-label={tab.label}
                 >
                   {tab.icon}
-                </button>
+                </Link>
               ))}
             </div>
           </div>

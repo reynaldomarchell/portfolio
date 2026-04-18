@@ -1,16 +1,20 @@
 "use client";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import Profile from "@/components/Profile";
 import Spotify from "@/components/Spotify";
-import Project from "@/components/Project";
-import WorkExperience from "@/components/WorkExperience";
-import Education from "@/components/Education";
-import Awards from "@/components/Awards";
 import PageWrapper from "@/components/PageWrapper";
 import FloatingTabs from "@/components/FloatingTabs";
 import Link from "next/link";
-import { Terminal } from "@/components/ui/terminal";
+
+const Project = dynamic(() => import("@/components/Project"));
+const WorkExperience = dynamic(() => import("@/components/WorkExperience"));
+const Education = dynamic(() => import("@/components/Education"));
+const Awards = dynamic(() => import("@/components/Awards"));
+const Terminal = dynamic(() =>
+  import("@/components/ui/terminal").then((m) => ({ default: m.Terminal })),
+);
 
 const terminalCommands = [
   "whoami",
