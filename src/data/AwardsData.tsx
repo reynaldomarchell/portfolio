@@ -33,10 +33,10 @@ export const AwardsData: AwardType[] = [
   },
   {
     title: "Finalist",
-    competition: "IPCC Asia Jakarta Regional Contest 2022",
+    competition: "ICPC Asia Jakarta Regional Contest 2022",
     date: "Nov 2022",
     location: "Jakarta, Indonesia",
     description:
-      "IPCC is a prestigious competitive programming competition that is held for two days. Each team will be given a challenge to solve 13 questions within 5 hours with the best and most effective solutions possible.",
+      "ICPC is a prestigious competitive programming competition that is held for two days. Each team will be given a challenge to solve 13 questions within 5 hours with the best and most effective solutions possible.",
   },
 ];

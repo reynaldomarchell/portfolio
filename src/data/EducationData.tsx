@@ -22,6 +22,6 @@ export const EducationData: EducationType[] = [
     duration: "Feb 2023 - Jun 2023",
     grade: "85 out of 100",
     description:
-      "Virtual study abroad program at YCCU Taiwan by taking Mathematical Programming course as a substitute for Calculus course at BINUS University",
+      "Virtual study abroad program at CYCU Taiwan by taking Mathematical Programming course as a substitute for Calculus course at BINUS University",
   },
 ];
