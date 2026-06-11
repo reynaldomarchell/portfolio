@@ -10,15 +10,6 @@ export type WorkExperienceType = {
 
 export const WorkExperienceData: WorkExperienceType[] = [
   {
-    company: "PT Bank Mandiri (Persero) Tbk.",
-    location: "Jakarta Raya, Indonesia · Onsite",
-    position: "Officer Development Program IT",
-    employmentType: "Full-time",
-    duration: "Mar 2026 - Present",
-    description: [],
-    skills: [],
-  },
-  {
     company: "Taiwan Mobile",
     location: "Taipei, Taiwan · Remote",
     position: "Software Engineer",

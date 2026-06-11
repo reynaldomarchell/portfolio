@@ -20,7 +20,6 @@ const terminalCommands = [
   "whoami",
   "cat skills.txt",
   "ls projects/",
-  "echo $CURRENT_ROLE",
 ];
 
 const terminalOutputs: Record<number, string[]> = {
@@ -40,7 +39,6 @@ const terminalOutputs: Record<number, string[]> = {
     "PiCO/  Sepik/  DearBouquet/  BLink/  NutriCek/",
     "QuizAI/  ConnectFriend/  GreenRise/  TransitPlus/  ChatAoba/",
   ],
-  3: ["Officer Development Program IT @ PT Bank Mandiri (Persero) Tbk."],
 };
 
 export default function Home() {
